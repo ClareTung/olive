@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>olive-standard-project-api</module>
+        <module>olive-standard-project-service</module>
+        <module>olive-standard-project-dao</module>
+        <module>olive-standard-project-model</module>
+    </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.4.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.olive</groupId>
+    <artifactId>olive-standard-project-sample</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <name>olive-standard-project-sample</name>
+    <description>提供标准的Java微服务项目</description>
+    <packaging>pom</packaging>
+
+    <properties>
+        <base.version>1.0.0-SNAPSHOT</base.version>
+        <orika.version>1.5.4</orika.version>
+        <guava.version>30.0-jre</guava.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.olive</groupId>
+                <artifactId>olive-standard-project-service</artifactId>
+                <version>${base.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.olive</groupId>
+                <artifactId>olive-standard-project-model</artifactId>
+                <version>${base.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.olive</groupId>
+                <artifactId>olive-standard-project-dao</artifactId>
+                <version>${base.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>ma.glasnost.orika</groupId>
+                <artifactId>orika-core</artifactId>
+                <version>${orika.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

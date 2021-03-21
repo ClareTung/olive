@@ -1,0 +1,17 @@
+#base
+server:
+  port: 8080
+#spring
+spring:
+  application:
+    name: springboot-es-start
+#elasticsearch
+elasticsearch:
+  schema: http
+  address: 127.0.0.1:9200
+  connectTimeout: 5000
+  socketTimeout: 5000
+  connectionRequestTimeout: 5000
+  maxConnectNum: 100
+  maxConnectPerRoute: 100
+

@@ -1,0 +1,6 @@
+server:
+  port: 9001
+
+olive:
+  enable: true
+  user-id: 0001

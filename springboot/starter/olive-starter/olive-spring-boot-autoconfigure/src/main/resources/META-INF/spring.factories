@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+ com.olive.starter.autoconfigure.configuration.OliveAutoConfiguration,\
+ com.olive.starter.autoconfigure.configuration.AspectLogAutoConfiguration

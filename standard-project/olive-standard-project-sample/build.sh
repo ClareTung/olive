@@ -1,0 +1,1 @@
+docker build ./ -t  ccr.ccs.tencentyun.com/olive-dev/olive-standard-project-sample-api:dev

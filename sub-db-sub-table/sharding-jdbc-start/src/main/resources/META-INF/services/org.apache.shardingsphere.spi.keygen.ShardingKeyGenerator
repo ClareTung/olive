@@ -1,0 +1,2 @@
+com.olive.sharding.jdbc.start.key.MyShardingKeyGenerator
+com.olive.sharding.jdbc.start.key.TinyIdShardingKeyGenerator

@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: olive-callcenter
+          uri: lb://olive-callcenter
+          predicates:
+            - Path=/callcenter/**
+#          filters:
+#            - StripPrefix= 1  # StripPrefix参数表示在将请求发送到下游之前从请求中剥离的路径个数
+#            - name: RequestRateLimiter #请求数限流 名字不能随便写
+#              args:
+#                key-resolver: "#{@ipKeyResolver}"  # 用于限流的键的解析器的 Bean 对象的名字。它使用 SpEL 表达式根据#{@beanName}从 Spring 容器中获取 Bean 对象。
+#                redis-rate-limiter.replenishRate: 1 # 令牌桶每秒填充平均速率
+#                redis-rate-limiter.burstCapacity: 1 # 令牌桶总容量
+        - id: system
+          uri: lb://system
+          predicates:
+            - Path=/system/**
+          filters:
+            - StripPrefix= 1
+  # 配置Redis 127.0.0.1可以省略配置
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: redis1234
+server:
+  port: 8888
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8081/eureka
+  instance:
+    prefer-ip-address: true

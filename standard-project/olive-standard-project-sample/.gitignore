@@ -1,0 +1,39 @@
+*/target/
+**/target/
+/logs/
+/doc/
+!.mvn/wrapper/maven-wrapper.jar
+./data/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
+
+# MacOSX noise
+.DS_Store
+
+/doc
+doc.zip
+=======
+/logs/
+/doc/
+!.mvn/wrapper/maven-wrapper.jar

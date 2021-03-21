@@ -1,0 +1,7 @@
+server:
+  port: 9999
+
+dingtalk:
+  webhook: 小O
+  secret: 4a61c6
+
