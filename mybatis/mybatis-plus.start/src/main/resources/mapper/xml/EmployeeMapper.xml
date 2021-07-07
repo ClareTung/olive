@@ -1,0 +1,17 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.olive.mybatis.plus.start.mapper.EmployeeMapper">
+
+    <sql id="Base_Column">
+        id, last_name, email, gender, age
+    </sql>
+
+    <select id="selectAllByLastName" resultType="cn.olive.mybatis.plus.start.entity.Employee">
+        select
+        <include refid="Base_Column"/>
+        from tbl_employee
+        where last_name = #{lastName}
+    </select>
+</mapper>
