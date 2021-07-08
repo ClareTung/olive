@@ -192,6 +192,47 @@ public class MyBatisConfig {
 `UpdateWrapper` 与 `QueryWrapper` 不同，它的作用是封装更新内容的。
 
 
+## 分页插件
+
+```xml
+<dependency>
+    <groupId>com.github.pagehelper</groupId>
+    <artifactId>pagehelper-spring-boot-starter</artifactId>
+    <version>1.3.0</version>
+</dependency>
+```
+
+```java
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+
+import java.util.List;
+
+/**
+ * @param <Param> 泛型request
+ * @param <Result> 泛型response
+ */
+public interface BaseService<Param, Result> {
+
+    /**
+     * 分页查询
+     *
+     * @param param 请求参数DTO
+     * @return 分页集合
+     */
+    default PageInfo<Result> page(PageParam<Param> param) {
+        return PageHelper.startPage(param).doSelectPageInfo(() -> list(param.getParam()));
+    }
+
+    /**
+     * 集合查询
+     *
+     * @param param 查询参数
+     * @return 查询响应
+     */
+    List<Result> list(Param param);
+}
+```
 
 
 
