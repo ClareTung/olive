@@ -81,6 +81,7 @@ Be brave,be bold and be proactive.
 * [windows下mysql5.7解压版安装](mysql/windows下mysql5.7解压版安装.md)
 
 ## netty
+* rpc-demo
 * [Netty](netty/Netty.md)
 
 ## perf-opt：性能优化（performance optimization）
