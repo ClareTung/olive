@@ -127,6 +127,7 @@ Be brave,be bold and be proactive.
 
 ## standard-project：Java微服务标准工程样例
 * [Java微服务标准工程样例](standard-project/standard-project.md)
+* [Java项目代码模块分层及领域模型划分](standard-project/Java项目代码模块分层及领域模型划分.md)
 
 ## sub-db-sub-table：分库分表
 * sharding-jdbc入门程序
