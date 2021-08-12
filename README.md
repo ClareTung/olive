@@ -101,8 +101,11 @@ Be brave,be bold and be proactive.
 * [rabbitmq](rabbitmq/rabbitmq.md)
 
 ## redis
-* 入门程序
+* Springboot集成Redis入门程序（redis-start）
 * [lettuce线程池大小性能测试](redis/lettuce线程池大小性能测试.md)
+* [Redis分布式锁](redis/Redisson.md)
+* [Redis延迟队列](redis/Redisson.md)
+
 
 ## skywalking
 * SkyWalking报警Demo程序
