@@ -137,6 +137,7 @@ Be brave,be bold and be proactive.
 * [分库分表](sub-db-sub-table/分库分表.md)
 
 ## tool：工具
+* [Git](tool/Git.md)
 * [JRebel安装使用](tool/JRebel安装使用.md)
 
 ## xxl-job
