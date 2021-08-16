@@ -138,6 +138,7 @@ Be brave,be bold and be proactive.
 
 ## tool：工具
 * [Git](tool/Git.md)
+* [Git提交代码后撤销操作](tool/Git提交代码后撤销操作.md)
 * [JRebel安装使用](tool/JRebel安装使用.md)
 
 ## xxl-job
