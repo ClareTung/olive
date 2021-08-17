@@ -45,6 +45,12 @@ Be brave,be bold and be proactive.
 
 ## gateway
 
+## 高并发（high-concurrency）
+* [深入理解高并发编程](high-concurrency/深入理解高并发编程.mm.md)
+* [高并发编程——基础案例](high-concurrency/高并发编程——基础案例.md)
+* [Redis+Lua实现分布式限流](high-concurrency/高并发编程——实战案例.md)
+    * 项目：olive-retelimiter
+
 
 ## interview：面试
 * [2020年上海面试题总结](interview/2020年上海面试题总结.md)
