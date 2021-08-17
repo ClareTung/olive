@@ -111,6 +111,7 @@ Be brave,be bold and be proactive.
 * [lettuce线程池大小性能测试](redis/lettuce线程池大小性能测试.md)
 * [Redis分布式锁](redis/Redisson.md)
 * [Redis延迟队列](redis/Redisson.md)
+* [什么是缓存穿透、击穿、雪崩？怎么解决？](redis/什么是缓存穿透、击穿、雪崩？怎么解决？.md)
 
 
 ## skywalking
