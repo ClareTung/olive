@@ -97,6 +97,7 @@ Be brave,be bold and be proactive.
 * [redis性能优化](perf-opt/redis性能优化.md)
 * [tomcat性能优化](perf-opt/tomcat性能优化.md)
 * [异步执行](perf-opt/异步执行.md)
+* [性能优化衡量指标和注意点](perf-opt/性能优化衡量指标和注意点.md)
 
 ## prometheus
 * [prometheus](prometheus/prometheus.md)
