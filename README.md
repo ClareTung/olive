@@ -134,7 +134,7 @@ Be brave,be bold and be proactive.
 ## springcloud
 * [Hystrix配置](springcloud/Hystrix配置.md)
 
-## sre：稳定性工程师
+## sre：网站可靠性工程
 * [SRE](sre/SRE.md)
 
 ## standard-project：Java微服务标准工程样例
