@@ -149,6 +149,7 @@ Be brave,be bold and be proactive.
 * [Git](tool/Git.md)
 * [Git提交代码后撤销操作](tool/Git提交代码后撤销操作.md)
 * [JRebel安装使用](tool/JRebel安装使用.md)
+* [XMind激活](tool/XMind激活.md)
 
 ## xxl-job
 * 入门程序
