@@ -127,7 +127,7 @@ Be brave,be bold and be proactive.
 
 ## spring
 * [AOP](spring/AOP.md)
-* [Spring validation](spring/Spring validation.md)
+* [Spring validation](spring/Spring-validation.md)
 
 ## springboot
 * 入门程序
