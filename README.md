@@ -65,6 +65,7 @@ Be brave,be bold and be proactive.
 * [Lombok](java/Lombok.md)
 * [Optional](java/Optional.md)
 * [SimpleDateFormat线程不安全的解决方案](java/SimpleDateFormat线程不安全的解决方案.md)
+* [StringUtils.isNotEmpty和StringUtils.isNotBlack的区别](java/StringUtils.isNotEmpty和StringUtils.isNotBlack的区别.md)
 * [ThreadLocal](java/ThreadLocal.md)
 * [代码优化](java/代码优化.md)
 * [多线程](java/多线程.md)
