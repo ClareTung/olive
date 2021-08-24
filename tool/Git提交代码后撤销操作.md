@@ -1,5 +1,12 @@
 # Git提交代码后撤销操作
 
+* 撤销本地commit
+    * HEAD 代表：上一次提交，这样刚刚提交的就又回到本地的local changes 列表中。 
+
+```
+git reset HEAD~
+```
+
 * 修改`git commit `信息
 
 ```
