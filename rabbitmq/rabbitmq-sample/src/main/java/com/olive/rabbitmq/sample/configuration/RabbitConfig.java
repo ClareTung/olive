@@ -6,6 +6,7 @@ import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.DirectExchange;
 import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.core.TopicExchange;
 import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFactory;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
@@ -19,6 +20,8 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.core.env.Environment;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 /**
@@ -105,4 +108,37 @@ public class RabbitConfig {
         return BindingBuilder.bind(sampleQueue()).to(defaultExchange())
                 .with(env.getProperty("rabbitmq.sample.routing.key"));
     }
+
+    /**
+     * 创建延时队列，并将其与二次消息投放的交换机进行绑定
+     *
+     * @return
+     */
+    @Bean
+    public Queue delayQueue() {
+        Map<String, Object> args = new HashMap<>();
+
+        args.put("x-dead-letter-exchange", env.getProperty("simple.deal.exchange.name"));
+        args.put("x-dead-letter-routing-key", env.getProperty("simple.deal.routing.key.name"));
+        args.put("x-message-ttl", 10000L);
+        return new Queue(env.getProperty("simple.deal.queue.name"), true, false, false, args);
+    }
+
+    @Bean
+    public TopicExchange produceDelayExchange() {
+        return new TopicExchange(env.getProperty("simple.produce.exchange.name"));
+    }
+
+    /**
+     * 将生产端与延时队列进行绑定
+     *
+     * @return
+     */
+    @Bean
+    public Binding bindProduceAndDelayQueue() {
+        return BindingBuilder.bind(delayQueue()).to(produceDelayExchange())
+                .with(env.getProperty("simple.produce.routing.key.name"));
+    }
+
+
 }
