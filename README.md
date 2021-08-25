@@ -150,10 +150,14 @@ Be brave,be bold and be proactive.
 * sharding-jdbc入门程序
 * [分库分表](sub-db-sub-table/分库分表.md)
 
+## thinking：我的思考
+* [底层逻辑](thinking/底层逻辑.png)
+
 ## tool：工具
 * [Git](tool/Git.md)
 * [Git提交代码后撤销操作](tool/Git提交代码后撤销操作.md)
 * [JRebel安装使用](tool/JRebel安装使用.md)
+* [Windows安装Linux子系统，安装Docker](tool/Windows安装Linux子系统，安装Docker.md)
 * [XMind激活](tool/XMind激活.md)
 
 ## xxl-job
