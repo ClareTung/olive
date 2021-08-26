@@ -103,6 +103,14 @@ sudo groupadd docker #添加docker用户组
 sudo gpasswd -a $USER docker #将登陆用户加入到docker用户组中
 newgrp docker #更新用户组
 ```
+##  Unable to proxy the request via the Docker socket (err=dial unix /var/run/docker.sock: connect: connection refused) (code=500)
+
+```
+clare@olive:/$ sudo gpasswd -a $USER docker
+Adding user clare to group docker
+clare@olive:/$ newgrp docker
+```
+
 
 ## Linux使用
 
