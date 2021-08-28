@@ -134,6 +134,12 @@
 * [Redis分布式锁](redis/Redisson.md)
 * [Redis延迟队列](redis/Redisson.md)
 * [什么是缓存穿透、击穿、雪崩？怎么解决？](redis/什么是缓存穿透、击穿、雪崩？怎么解决？.md)
+* Redis深度历险
+    * [Redis-基础数据结构](redis/Redis-基础数据结构.md)
+    * [Redis-分布式锁](redis/Redis-分布式锁.md)
+    * [Redis-延时队列](redis/Redis-延时队列.md)
+    * [Redis-位图](redis/Redis-位图.md)
+
 
 
 ## skywalking
