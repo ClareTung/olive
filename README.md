@@ -46,6 +46,7 @@
 * [容器间通信](docker/容器间通信.md)
 * [Docker网络模型](docker/Docker网络模型.md)
 * [Docker安装MySQL](docker/Docker安装MySQL.md)
+* [Docker安装Redis](docker/Docker安装Redis.md)
 * [重启Docker服务，容器全部退出的解决方法](docker/重启Docker服务，容器全部退出的解决方法.md)
 * [SpringBoot2.3.x分层构建Docker镜像](docker/SpringBoot2.3.x分层构建Docker镜像.md)
 
