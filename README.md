@@ -1,6 +1,12 @@
-# OLIVE
-* Be brave,be bold and be proactive.
-* 勇敢一点，主动一点，大胆一点。
+# OLIVE-JAVA
+
+![橄榄128](https://cdn.jsdelivr.net/gh/ClareTung/ImageHostingService/img/%E6%A9%84%E6%A6%84128.png)
+
+<p align = "center">Be brave,be bold and be proactive.</p>
+
+<p align = "center">勇敢一点，主动一点，大胆一点。</p>
+
+> Olive（橄榄），致力于打造成为一个开源的Java知识体系构建的知识库。
 
 # 项目结构
 ## algorithm-data-structure：算法与数据结构
