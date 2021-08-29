@@ -93,6 +93,8 @@
 
 ## kubernetes
 
+## linux
+
 ## maven
 * [maven-distributionManagement](maven/maven-distributionManagement.md)
 * [修改版本号](maven/修改版本号.md)
@@ -101,6 +103,18 @@
 * mybatis-generator：Mybatis代码生成工具
 
 ## mysql
+* [MySQL逻辑架构](mysql/MySQL逻辑架构.md)
+* [向MySQL发送一个请求的时候，MySQL到底做了些什么？](mysql/MySQL查询过程.md)
+* [索引相关的数据结构和算法](mysql/索引相关的数据结构和算法.md)
+* [MySQL性能优化建议](mysql/MySQL性能优化建议.md)
+    * Scheme设计与数据类型优化
+    * 创建高性能索引
+    * 优化count()查询
+    * 优化关联查询
+    * 优化LIMIT分页
+    * 优化UNION
+
+---
 * [mysql数据库5.7和8.0安装](mysql/mysql数据库5.7和8.0安装.md)
 * [windows下mysql5.7解压版安装](mysql/windows下mysql5.7解压版安装.md)
 
@@ -134,13 +148,15 @@
 * [Redis分布式锁](redis/Redisson.md)
 * [Redis延迟队列](redis/Redisson.md)
 * [什么是缓存穿透、击穿、雪崩？怎么解决？](redis/什么是缓存穿透、击穿、雪崩？怎么解决？.md)
+
+---
 * Redis深度历险
     * [Redis-基础数据结构](redis/Redis-基础数据结构.md)
     * [Redis-分布式锁](redis/Redis-分布式锁.md)
     * [Redis-延时队列](redis/Redis-延时队列.md)
     * [Redis-位图](redis/Redis-位图.md)
 
-
+## security：安全
 
 ## skywalking
 * SkyWalking报警Demo程序
