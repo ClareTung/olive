@@ -1,6 +1,8 @@
 # OLIVE-JAVA
 
-![橄榄128](https://cdn.jsdelivr.net/gh/ClareTung/ImageHostingService/img/%E6%A9%84%E6%A6%84128.png)
+<div align=center>
+<img src="https://cdn.jsdelivr.net/gh/ClareTung/ImageHostingService/img/%E6%A9%84%E6%A6%84128.png"/>
+</div>
 
 <p align = "center">Be brave,be bold and be proactive.</p>
 
