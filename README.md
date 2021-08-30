@@ -108,6 +108,7 @@
 * [修改版本号](maven/修改版本号.md)
 
 ## mybatis
+* multi-db：Springboot+MybatisPlus+Druid+MySQL实现多数据源配置，主从读写分离
 * mybatis-generator：Mybatis代码生成工具
 
 ## mysql
