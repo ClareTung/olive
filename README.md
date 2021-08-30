@@ -163,6 +163,11 @@
     * [Redis-分布式锁](redis/Redis-分布式锁.md)
     * [Redis-延时队列](redis/Redis-延时队列.md)
     * [Redis-位图](redis/Redis-位图.md)
+    * [Redis-HyperLogLog](redis/Redis-HyperLogLog.md)
+    * [Redis-布隆过滤器](redis/Redis-布隆过滤器.md)
+    * [Redis-限流](redis/Redis-限流.md)
+    * [Redis-GeoHash](redis/Redis-GeoHash.md)
+    * [Redis-Scan](redis/Redis-Scan.md)
 
 ## security：安全
 
