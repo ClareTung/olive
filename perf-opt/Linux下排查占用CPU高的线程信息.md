@@ -19,6 +19,11 @@ top -Hp {pid}
 jps -l
 jstack -l 2227 > /opt/2227.stack
 ```
+或者
+```
+ jstack <pid>|grep -A 10 <thread 0x16 id>
+#jstack 14203 |  grep -A 10 377c
+```
 
 * 下载2222.stack到本地，进行分析。在Linux上分析
 
