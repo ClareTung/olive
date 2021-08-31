@@ -169,6 +169,7 @@
     * [Redis-限流](redis/Redis-限流.md)
     * [Redis-GeoHash](redis/Redis-GeoHash.md)
     * [Redis-Scan](redis/Redis-Scan.md)
+    * [Redis-线程IO模型](redis/Redis-线程IO模型.md)
 
 ## security：安全
 
