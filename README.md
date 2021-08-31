@@ -149,6 +149,12 @@
 * [tcp连接优化](perf-opt/tcp连接优化.md)
 * [性能优化衡量指标和注意点](perf-opt/性能优化衡量指标和注意点.md)
 ---
+* [Windows下使用ProcessorExplorer分析消耗CPU高的线程](perf-opt/Windows下使用ProcessorExplorer分析消耗CPU高的线程.md)
+* [Linux下排查占用CPU高的线程信息](perf-opt/Linux下排查占用CPU高的线程信息.md)
+* [Linux下分析内存泄露](perf-opt/Linux下分析内存泄露.md)
+
+---
+* [JMeter](perf-opt/JMeter.md)
 * [JProfiler](perf-opt/JProfiler.md)
 * [jvisualvm](perf-opt/jvisualvm.md)
 
