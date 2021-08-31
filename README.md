@@ -143,12 +143,14 @@
 ## perf-opt：性能优化（performance optimization）
 * [内存溢出和内存泄露](perf-opt/内存溢出和内存泄露.md)
 * [Java性能调优实践](perf-opt/Java性能调优实践.md)
-* [JProfiler](perf-opt/JProfiler.md)
 * [redis性能优化](perf-opt/redis性能优化.md)
 * [tomcat性能优化](perf-opt/tomcat性能优化.md)
 * [异步执行](perf-opt/异步执行.md)
 * [tcp连接优化](perf-opt/tcp连接优化.md)
 * [性能优化衡量指标和注意点](perf-opt/性能优化衡量指标和注意点.md)
+---
+* [JProfiler](perf-opt/JProfiler.md)
+* [jvisualvm](perf-opt/jvisualvm.md)
 
 ## prometheus
 * [prometheus](prometheus/prometheus.md)
