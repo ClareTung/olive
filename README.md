@@ -14,6 +14,9 @@
 ## algorithm-data-structure：算法与数据结构
 * [算法与数据结构](algorithm-data-structure/index.md)
 
+## career：职业生涯
+* [CTO、技术总监、架构师是干什么的](career/CTO、技术总监、架构师是干什么的.md)
+
 ## design-pattern：设计模式
 * [中介者模式](design-pattern/中介者模式.md)
 * [享元模式](design-pattern/享元模式.md)
