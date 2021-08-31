@@ -141,6 +141,7 @@
 * [Nginx实现限流](nginx/Nginx实现限流.md)
 
 ## perf-opt：性能优化（performance optimization）
+* [内存溢出和内存泄露](perf-opt/内存溢出和内存泄露.md)
 * [Java性能调优实践](perf-opt/Java性能调优实践.md)
 * [JProfiler](perf-opt/JProfiler.md)
 * [redis性能优化](perf-opt/redis性能优化.md)
