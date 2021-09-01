@@ -177,18 +177,22 @@
 
 ---
 * Redis深度历险
-    * [Redis-基础数据结构](redis/Redis-基础数据结构.md)
-    * [Redis-分布式锁](redis/Redis-分布式锁.md)
-    * [Redis-延时队列](redis/Redis-延时队列.md)
-    * [Redis-位图](redis/Redis-位图.md)
-    * [Redis-HyperLogLog](redis/Redis-HyperLogLog.md)
-    * [Redis-布隆过滤器](redis/Redis-布隆过滤器.md)
-    * [Redis-限流](redis/Redis-限流.md)
-    * [Redis-GeoHash](redis/Redis-GeoHash.md)
-    * [Redis-Scan](redis/Redis-Scan.md)
-    * [Redis-线程IO模型](redis/Redis-线程IO模型.md)
-    * [Redis-通信协议](redis/Redis-通信协议.md)
-    * [Redis-持久化](redis/Redis-持久化.md)
+    * [基础数据结构](redis/Redis-基础数据结构.md)
+    * [分布式锁](redis/Redis-分布式锁.md)
+    * [延时队列](redis/Redis-延时队列.md)
+    * [位图](redis/Redis-位图.md)
+    * [HyperLogLog](redis/Redis-HyperLogLog.md)
+    * [布隆过滤器](redis/Redis-布隆过滤器.md)
+    * [限流](redis/Redis-限流.md)
+    * [GeoHash](redis/Redis-GeoHash.md)
+    * [Scan](redis/Redis-Scan.md)
+    * [线程IO模型](redis/Redis-线程IO模型.md)
+    * [通信协议](redis/Redis-通信协议.md)
+    * [持久化](redis/Redis-持久化.md)
+    * [管道](redis/Redis-管道.md)
+    * [事务](redis/Redis-事务.md)
+    * [PubSub](redis/Redis-PubSub.md)
+    
 
 ## security：安全
 
