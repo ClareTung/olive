@@ -91,6 +91,7 @@
 * [Java8新特性](java/Java8新特性.md)
 * [Java8线程池底层原理及其源码解析](java/Java8线程池底层原理及其源码解析.md)
 * [Java中的null](java/Java中的null.md)
+* [Java语法糖](java/Java语法糖.md)
 * [jclasslib](java/jclasslib.md)
 * [Lombok](java/Lombok.md)
 * [Optional](java/Optional.md)
