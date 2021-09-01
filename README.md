@@ -186,6 +186,7 @@
     * [Redis-GeoHash](redis/Redis-GeoHash.md)
     * [Redis-Scan](redis/Redis-Scan.md)
     * [Redis-线程IO模型](redis/Redis-线程IO模型.md)
+    * [Redis-通信协议](redis/Redis-通信协议.md)
 
 ## security：安全
 
