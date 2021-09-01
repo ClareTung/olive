@@ -212,7 +212,8 @@
 * [Hystrix配置](springcloud/Hystrix配置.md)
 
 ## sre：网站可靠性工程
-* [SRE](sre/SRE.md)
+* [SRE-实践经验](sre/SRE.md)
+* [SRE-基础概念](sre/SRE.png)
 
 ## standard-project：Java微服务标准工程样例
 * [Java微服务标准工程样例](standard-project/standard-project.md)
