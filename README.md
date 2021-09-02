@@ -194,6 +194,7 @@
     * [PubSub](redis/Redis-PubSub.md)
     * [小对象压缩](redis/Redis-小对象压缩.md)
     * [主从同步](redis/Redis-主从同步.md)
+    * [Sentinel（哨兵）](redis/Redis-Sentinel（哨兵）.md)
     
 
 ## security：安全
