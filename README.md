@@ -192,6 +192,7 @@
     * [管道](redis/Redis-管道.md)
     * [事务](redis/Redis-事务.md)
     * [PubSub](redis/Redis-PubSub.md)
+    * [小对象压缩](redis/Redis-小对象压缩.md)
     
 
 ## security：安全
