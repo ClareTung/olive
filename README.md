@@ -197,6 +197,7 @@
     * [Sentinel（哨兵）](redis/Redis-Sentinel（哨兵）.md)
     * [Codis](redis/Redis-Codis.md)
     * [Cluster](redis/Redis-Cluster.md)
+    * [Stream](redis/Redis-Stream.md)
     
 
 ## security：安全
