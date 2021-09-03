@@ -198,6 +198,7 @@
     * [Codis](redis/Redis-Codis.md)
     * [Cluster](redis/Redis-Cluster.md)
     * [Stream](redis/Redis-Stream.md)
+    * [Info指令](redis/Redis-Info指令.md)
     
 
 ## security：安全
