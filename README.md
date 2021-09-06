@@ -201,6 +201,9 @@
     * [Info指令](redis/explore/Redis-Info指令.md)
     * [再谈分布式锁](redis/explore/Redis-再谈分布式锁.md)
     * [过期策略](redis/explore/Redis-过期策略.md)
+    * [LRU](redis/explore/Redis-LRU.md)
+    * [懒惰删除](redis/explore/Redis-懒惰删除.md)
+    * [保护Redis](redis/explore/Redis-保护Redis.md)
     
 
 ## security：安全
