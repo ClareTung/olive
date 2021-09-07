@@ -211,6 +211,8 @@
 * 缺点
   * 编程难度复杂
 
+![netty-reactor](https://cdn.jsdelivr.net/gh/ClareTung/ImageHostingService/img/netty-reactor.png)
+
 ## Netty模型
 
 * Netty主要基于主从Reactor多线程模型
