@@ -206,6 +206,7 @@
     * [保护Redis](redis/explore/Redis-保护Redis.md)
     * [字符串内部结构](redis/explore/Redis-字符串内部结构.md)
     * [字典内部结构](redis/explore/Redis-字典内部结构.md)
+    * [压缩列表内部结构](redis/explore/Redis-压缩列表内部结构.md)
     
 
 ## security：安全
