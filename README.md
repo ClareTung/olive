@@ -208,6 +208,7 @@
     * [字典内部结构](redis/explore/Redis-字典内部结构.md)
     * [压缩列表内部结构](redis/explore/Redis-压缩列表内部结构.md)
     * [快速列表内部结构](redis/explore/Redis-快速列表内部结构.md)
+    * [跳跃列表内部结构](redis/explore/Redis-跳跃列表内部结构.md)
     
 
 ## security：安全
