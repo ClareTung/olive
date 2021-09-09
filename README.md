@@ -170,6 +170,7 @@
 
 ## redis
 * Springboot集成Redis入门程序（redis-start）
+* [Jedis、Redisson、Lettuce的区别](redis/Jedis-Redisson-Lettuce的区别.md)
 * [lettuce线程池大小性能测试](redis/lettuce线程池大小性能测试.md)
 * [Redis分布式锁](redis/Redisson.md)
 * [Redis延迟队列](redis/Redisson.md)
