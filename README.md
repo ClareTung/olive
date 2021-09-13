@@ -177,6 +177,10 @@
 * [什么是缓存穿透、击穿、雪崩？怎么解决？](redis/什么是缓存穿透、击穿、雪崩？怎么解决？.md)
 
 ---
+* [幂等](redis/幂等.md)
+* olive-idempotent：基于token机制实现幂等
+
+---
 * Redis深度历险
     * [基础数据结构](redis/explore/Redis-基础数据结构.md)
     * [分布式锁](redis/explore/Redis-分布式锁.md)
