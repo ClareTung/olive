@@ -123,6 +123,7 @@
 * [MySQL内部缓存BufferPool（MySQL如何减少磁盘IO）](mysql/MySQL内部缓存BufferPool.md)
 * [向MySQL发送一个请求的时候，MySQL到底做了些什么？](mysql/MySQL查询过程.md)
 * [一条查询SQL的执行过程](mysql/一条查询SQL的执行过程.md)
+* [一条更新SQL的执行过程](mysql/一条更新SQL的执行过程.md)
 * [索引相关的数据结构和算法](mysql/索引相关的数据结构和算法.md)
 * [MySQL性能优化建议](mysql/MySQL性能优化建议.md)
     * Scheme设计与数据类型优化
