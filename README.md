@@ -125,6 +125,7 @@
 * [一条查询SQL的执行过程](mysql/一条查询SQL的执行过程.md)
 * [一条更新SQL的执行过程](mysql/一条更新SQL的执行过程.md)
 * [索引相关的数据结构和算法](mysql/索引相关的数据结构和算法.md)
+* [MySQL中的锁](mysql/MySQL中的锁.md)
 * [MySQL性能优化建议](mysql/MySQL性能优化建议.md)
     * Scheme设计与数据类型优化
     * 创建高性能索引
