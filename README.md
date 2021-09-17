@@ -128,6 +128,7 @@
 * [MySQL中的锁](mysql/MySQL中的锁.md)
 * [MySQL的explain](mysql/MySQL的explain.md)
 * [MySQL索引下推](mysql/MySQL索引下推.md)
+* [MySQL中orderby工作原理](mysql/MySQL中orderby工作原理.md)
 * [MySQL性能优化建议](mysql/MySQL性能优化建议.md)
     * Scheme设计与数据类型优化
     * 创建高性能索引
