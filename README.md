@@ -66,6 +66,7 @@
 
 ## elasticsearch
 * [elasticsearch](elasticsearch/es.md)
+* [ElasticSearch搜索原理](elasticsearch/ElasticSearch搜索原理.md)
 
 ## eureka
 
