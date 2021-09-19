@@ -269,6 +269,7 @@
 * [Windows安装Linux子系统，安装Docker](tool/Windows安装Linux子系统，安装Docker.md)
 * [Xshell链接Windows子系统Linux](tool/Xshell链接Windows子系统Linux.md)
 * [XMind激活](tool/XMind激活.md)
+* [MacBook pro m1 安装jdk、maven、git](tool/mac安装jdk-maven-git.md)
 
 ## xxl-job
 * 入门程序
