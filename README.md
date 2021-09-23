@@ -234,6 +234,7 @@
 
 ## spring
 * [AOP](spring/AOP.md)
+* [Spring循环依赖](spring/Spring-循环依赖.md)
 * [Spring validation](spring/Spring-validation.md)
 
 ## springboot
