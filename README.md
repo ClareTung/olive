@@ -105,6 +105,7 @@
 * [线程池](java/线程池.md)
 * [线程池中多余的线程是如何回收的](java/线程池中多余的线程是如何回收的.md)
 * [Java中提供了Synchronized，为什么还要提供Lock呢？](java/Java中提供了Synchronized，为什么还要提供Lock呢？.md)
+* [5种类代理的方式](java/5种类代理的方式.md)
 
 
 ## kubernetes
