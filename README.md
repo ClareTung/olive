@@ -20,6 +20,9 @@
 ## career：职业生涯
 * [CTO、技术总监、架构师是干什么的](career/CTO、技术总监、架构师是干什么的.md)
 
+## distributed：分布式
+* [分布式架构设计](distributed/分布式架构设计.md)
+
 ## design-pattern：设计模式
 * [中介者模式](design-pattern/中介者模式.md)
 * [享元模式](design-pattern/享元模式.md)
