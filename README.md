@@ -242,6 +242,7 @@
 * [Spring循环依赖](spring/Spring-循环依赖.md)
 * [Spring validation](spring/Spring-validation.md)
 * [Spring IOC特性](spring/Spring-IOC特性.md)
+* [Spring getBean源码解析](spring/Spring-getBean源码解析.md)
 
 ## springboot
 * 入门程序
