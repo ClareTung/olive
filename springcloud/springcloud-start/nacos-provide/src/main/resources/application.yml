@@ -1,0 +1,12 @@
+server:
+  port: 8306
+  servlet:
+    context-path: /np
+
+spring:
+  application:
+    name: nacos-provide
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://10.231.38.150:8848
