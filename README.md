@@ -255,6 +255,7 @@
 ## springcloud
 * [Hystrix配置](springcloud/Hystrix配置.md)
 * [OpenFeign核心原理](springcloud/OpenFeign核心原理.md)
+* [Eureka深入解析](springcloud/Eureka深入解析.md)
 
 ## sre：网站可靠性工程
 * [SRE-实践经验](sre/SRE.md)
