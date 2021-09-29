@@ -13,6 +13,7 @@
 # 项目结构
 ## algorithm-data-structure：算法与数据结构
 * [算法与数据结构](algorithm-data-structure/index.md)
+* [一致性Hash算法](algorithm-data-structure/一致性Hash算法.md)
 
 ## architect：架构
 * [微服务](architect/微服务.md)
