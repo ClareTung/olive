@@ -176,6 +176,9 @@
 ## prometheus
 * [prometheus](prometheus/prometheus.md)
 
+## MQ：消息队列
+* [为什么要使用消息队列，有什么优缺点](mq/为什么要使用消息队列，有什么优缺点.md)
+
 ## rabbitmq
 * 样例
 * 入门程序
