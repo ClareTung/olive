@@ -201,6 +201,7 @@
 * Springboot集成Redis入门程序（redis-start）
 * [为什么要用缓存](redis/为什么要用缓存.md)
 * [Redis的线程模型](redis/Redis的线程模型.md)
+* [Redis的过期策略、内存淘汰机制及LRU算法实现](redis/Redis的过期策略、内存淘汰机制及LRU算法实现.md)
 * [Jedis、Redisson、Lettuce的区别](redis/Jedis-Redisson-Lettuce的区别.md)
 * [lettuce线程池大小性能测试](redis/lettuce线程池大小性能测试.md)
 * [Redis分布式锁](redis/Redisson.md)
