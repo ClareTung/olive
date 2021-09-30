@@ -74,6 +74,7 @@
 * [ES：核心概念](elasticsearch/ES：核心概念.md)
 * [ElasticSearch搜索原理](elasticsearch/ElasticSearch搜索原理.md)
 * [ES的分布式架构原理（ES是如何实现分布式的）](elasticsearch/ES的分布式架构原理（ES是如何实现分布式的）.md)
+* [ES写入查询数据的工作原理，倒排索引了解吗](elasticsearch/ES写入查询数据的工作原理，倒排索引了解吗.md)
 
 
 ## eureka
