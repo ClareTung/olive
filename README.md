@@ -73,6 +73,7 @@
 * [elasticsearch简介、安装与使用](elasticsearch/es.md)
 * [ES：核心概念](elasticsearch/ES：核心概念.md)
 * [ElasticSearch搜索原理](elasticsearch/ElasticSearch搜索原理.md)
+* [ES的分布式架构原理（ES是如何实现分布式的）](elasticsearch/ES的分布式架构原理（ES是如何实现分布式的）.md)
 
 
 ## eureka
