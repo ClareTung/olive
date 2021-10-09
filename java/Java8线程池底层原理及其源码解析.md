@@ -412,7 +412,7 @@ protected boolean tryAcquire(int unused) {
 
 * #### tryRelease方法
 
-直接将当前持有锁的线程设置为null, 将`state`设置为1;
+直接将当前持有锁的线程设置为null, 将`state`设置为0;
 
 形参`unused`没有用到。
 
@@ -681,7 +681,7 @@ static class DefaultThreadFactory implements ThreadFactory {
 
 ##### CallerRunsPolicy
 
-如果线程池状态不是`SHUTDOWN`, 由提交任务到线程池中(如调用`ThreadPoolExecutor#execute`方法)的线程执行该任务;
+如果线程池状态不是`SHUTDOWN`, 由提交任务到线程池中(如调用`ThreadPoolExecutor#execute`方法)的线程执行该任务;(可以认为是主线程)
 
 如果线程池状态是`SHUTDOWN`, 则该任务会被直接丢弃掉, **不会再次入队**或**被任何线程执行**
 
