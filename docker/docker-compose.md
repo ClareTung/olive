@@ -53,5 +53,5 @@ services:
     * 4、build是服务的子节点，表示该服务容器通过哪里的Dockerfile来构建
     * 5、restart表示服务重启的策略，如果容器意外退出，那么docker会重新启动
     * 6、environment指定服务容器的环境变量
-    * 7、depends_on表示该容器的以来，我们的app容器依赖于db服务容器，depends_on下跟服务名
+    * 7、depends_on表示该容器的依赖，我们的app容器依赖于db服务容器，depends_on下跟服务名
     * 8、ports用来设置该服务的端口和宿主机端口的一个映射，格式为宿主机端口：容器暴露的端口
