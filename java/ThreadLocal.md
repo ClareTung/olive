@@ -126,7 +126,7 @@ public class MyThreadLocalByDateFormat {
 }
 ```
 
-### 跨类夸方法数据传递
+### 跨类跨方法数据传递
 
 ```java
 public class AdminStorage {
