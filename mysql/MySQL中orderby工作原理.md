@@ -2,7 +2,7 @@
 
 ### 全字段排序
 
-* MySQL会给每个线程分配一块内存用于排序，称为**sort_buffer**
+* MySQL会给每个线程分配一块内存用于排序，称为**sort_buffer** 
 * 执行流程，如下：
   1. 初始化sort_buffer，确定放入select的字段
   2. 找到满足条件的行取出select的字段存入sort_buffer中
