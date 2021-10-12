@@ -270,6 +270,7 @@
 * 自定义starter
 * [HttpMessageConverter](springboot/HttpMessageConverter.md)
 * [SpringBoot定时任务](springboot/SpringBoot定时任务.md)
+* [SpringBoot数据库连接池的加载过程](springboot/SpringBoot数据库连接池的加载过程.md)
 * [异步线程池](springboot/异步线程池.md)
 
 ## springcloud
