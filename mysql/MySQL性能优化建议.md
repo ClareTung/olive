@@ -126,7 +126,7 @@ while(outer_row) {
 * 优化这种查询一个最简单的办法就是尽可能的使用覆盖索引扫描，而不是查询所有的列。然后根据需要做一次关联查询再返回所有的列。对于偏移量很大时，这样做的效率会提升非常大。考虑下面的查询：
 
 ```
-ELECT film_id,description FROM film ORDER BY title LIMIT 50,5;  
+SELECT film_id,description FROM film ORDER BY title LIMIT 50,5;  
 ```
 
 * 如果这张表非常大，那么这个查询最好改成下面的样子：
