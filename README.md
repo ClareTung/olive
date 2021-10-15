@@ -268,6 +268,7 @@
 * [如何初始化bean](spring/如何初始化bean.md)
 * [自定义自己的Scope](spring/自定义自己的Scope.md)
 * [别说FactoryBean没用](spring/别说FactoryBean没用.md)
+* [轻松自定义类型转换](spring/轻松自定义类型转换.md)
 
 ## springboot
 * 入门程序
