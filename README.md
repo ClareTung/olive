@@ -270,6 +270,7 @@
 * [别说FactoryBean没用](spring/别说FactoryBean没用.md)
 * [轻松自定义类型转换](spring/轻松自定义类型转换.md)
 * [spring mvc拦截器](spring/spring mvc拦截器.md)
+* [Enable开关](spring/Enable开关.md)
 
 ## springboot
 * 入门程序
