@@ -265,6 +265,7 @@
 * [Spring IOC特性](spring/Spring-IOC特性.md)
 * [Spring getBean源码解析](spring/Spring-getBean源码解析.md)
 * [如何获取Spring容器对象](spring/如何获取spring容器对象.md)
+* [如何初始化bean](spring/如何初始化bean.md)
 
 ## springboot
 * 入门程序
