@@ -267,6 +267,7 @@
 * [如何获取Spring容器对象](spring/如何获取spring容器对象.md)
 * [如何初始化bean](spring/如何初始化bean.md)
 * [自定义自己的Scope](spring/自定义自己的Scope.md)
+* [别说FactoryBean没用](spring/别说FactoryBean没用.md)
 
 ## springboot
 * 入门程序
