@@ -274,6 +274,7 @@
 * [RestTemplate拦截器](spring/RestTemplate拦截器.md)
 * [统一异常处理](spring/统一异常处理.md)
 * [异步](spring/异步.md)
+* [缓存](spring/缓存.md)
 
 ## springboot
 * 入门程序
