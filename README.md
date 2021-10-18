@@ -25,6 +25,7 @@
 
 ## distributed：分布式
 * [分布式架构设计](distributed/分布式架构设计.md)
+* [CAP定理](distributed/CAP定理.md)
 
 ## design-pattern：设计模式
 * [中介者模式](design-pattern/中介者模式.md)
