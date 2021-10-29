@@ -3,7 +3,7 @@ package com.olive.java.start.threadalternateprinting;
 import java.util.concurrent.locks.LockSupport;
 
 /**
- * @description:
+ * @description: 两个线程交替打印
  * @program: olive
  * @author: dtq
  * @create: 2021/10/9 13:50
