@@ -11,5 +11,26 @@
 
     <artifactId>springboot-rocketmq-producer</artifactId>
 
+    <properties>
+        <rocketmq-spring-boot-starter-version>2.2.1</rocketmq-spring-boot-starter-version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-spring-boot-starter</artifactId>
+            <version>${rocketmq-spring-boot-starter-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 </project>

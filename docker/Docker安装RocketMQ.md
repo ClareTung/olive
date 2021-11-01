@@ -52,6 +52,12 @@ brokerIP1 = 192.168.3.27
 
 ip改成你的linux宿主机的ip
 
+也可以通过-v参数指定本机的配置文件：
+
+```
+docker run -d -p 10911:10911 -p 10909:10909 --name rmqbroker --link rmqserver:namesrv -e "NAMESRV_ADDR=namesrv:9876" -e "JAVA_OPTS=-Duser.home=/opt" -e "JAVA_OPT_EXT=-server -Xms128m -Xmx128m" -v /conf/broker.conf:/etc/rocketmq/broker.conf foxiswho/rocketmq:broker-4.5.1
+```
+
 ### 安装 rocketmq console
 
 ```
