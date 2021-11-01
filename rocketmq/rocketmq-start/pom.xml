@@ -17,6 +17,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>springboot-rocketmq-producer</module>
+        <module>springboot-rocketmq-consumer</module>
     </modules>
 
 
