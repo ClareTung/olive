@@ -151,3 +151,13 @@ public void dealBody(List<MessageExt> msgs) {
 }
 ```
 
+### 测试
+* postman请求地址：localhost:7654/api/businessService/getMessage
+* 返回结果
+```json
+{
+    "status": 200,
+    "message": "RocketMQ流量削峰0AE722B6226018B4AAC212FC96F40001"
+}
+```
+* redis中会存在处理后的结果数据
