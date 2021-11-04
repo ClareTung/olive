@@ -213,6 +213,7 @@
 
 ## RocketMQ
 * [RocketMQ架构与实战](rocketmq/RocketMQ架构与实战.md)
+* [RocketMQ流量削峰](rocketmq/flowpeakclipping/RocketMQ流量削峰.md)
 
 
 ## redis

@@ -1,0 +1,30 @@
+server:
+  port: 7655 # 应用启动端口
+
+spring:
+   application:
+     name: fpc-mq # 应用名，也是显示在注册中心的名字
+# 配置中心
+   cloud:
+     nacos:
+      discovery:
+         server-addr: 10.231.34.182:8848
+   redis:
+    # 使用的数据库，默认为0
+     database: 0
+    # host主机，默认为localhost
+     host: 127.0.0.1
+    # 端口号,默认为6379
+     port: 6379
+    # 密码，默认为空
+     password: redis1234
+rocketmq:
+  namesrvAddr: 127.0.0.1:9876
+  producer:
+    groupName: fpcDeafaultProducer
+  transactionProducer:
+    groupName: fpcTransactionProducer
+  topic:
+    getMessageTopic: getMessageTopic
+
+
