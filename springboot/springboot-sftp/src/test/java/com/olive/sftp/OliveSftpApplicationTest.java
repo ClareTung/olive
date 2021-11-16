@@ -1,6 +1,7 @@
 package com.olive.sftp;
 
 import com.olive.sftp.service.FileSystemService;
+import com.olive.sftp.util.ZipUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,6 +12,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author dongtangqiang
@@ -35,6 +38,27 @@ public class OliveSftpApplicationTest {
         }
 
         inputStream.close();
+    }
+
+    @Test
+    public void zipUpload() throws Exception {
+        File file = new File("/Users/clare/Documents/drawio/test.drawio");
+        List<File> fileList = new ArrayList<>();
+        fileList.add(file);
+
+        String zipFileName = "hello.zip";
+        String zipPath = ZipUtil.makeZip(zipFileName, fileList);
+        InputStream inputStream = new FileInputStream(zipPath);
+
+        boolean uploadFile = fileSystemService.uploadFile("document/" + zipFileName, inputStream);
+        if (uploadFile) {
+            System.out.println("success.....");
+        } else {
+            System.out.println("failure.....");
+        }
+
+        inputStream.close();
+
     }
 
     @Test
