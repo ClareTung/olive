@@ -94,6 +94,8 @@ ElaticSearch 默认是动态创建索引和索引类型的 Mapping 的。这就�
 
 * 7.4 默认不在支持指定索引类型，默认索引类型是_doc（隐含：include_type_name=false）
 
+## Kibana操作
+* Dev Tools下操作即可
 
 
 ## 创建索引
