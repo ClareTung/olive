@@ -169,6 +169,9 @@
 * [mysql数据库5.7和8.0安装](mysql/mysql数据库5.7和8.0安装.md)
 * [windows下mysql5.7解压版安装](mysql/windows下mysql5.7解压版安装.md)
 
+---
+* [int(1)和int(10)的区别](mysql/int(1)和int(10)的区别.md)
+
 ## netty
 * rpc-demo
 * [Netty](netty/Netty.md)
@@ -288,7 +291,7 @@
 * [自定义自己的Scope](spring/自定义自己的Scope.md)
 * [别说FactoryBean没用](spring/别说FactoryBean没用.md)
 * [轻松自定义类型转换](spring/轻松自定义类型转换.md)
-* [spring mvc拦截器](spring/spring mvc拦截器.md)
+* [spring mvc拦截器](spring/SpringMVC拦截器.md)
 * [Enable开关](spring/Enable开关.md)
 * [RestTemplate拦截器](spring/RestTemplate拦截器.md)
 * [统一异常处理](spring/统一异常处理.md)
