@@ -148,10 +148,27 @@ PUT /es-start-user
 }
 ```
 
+## 判断索引是否存在
+
+```
+HEAD /es-start-user
+```
+
 ## 查询索引
 
 ```
 GET es-start-user
+```
+
+## 打开索引
+
+```
+POST /es-start-user/_open
+```
+## 关闭索引
+
+``` 
+POST /es-start-user/_close
 ```
 
 ## 删除索引
