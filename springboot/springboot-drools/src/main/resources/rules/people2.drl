@@ -1,0 +1,10 @@
+package com.olive.people2
+import com.olive.drools.bean.People
+dialect "java"
+
+rule "gril"
+    when
+        $p : People(sex == 0 && drlType == "people")
+    then
+        System.out.println($p.getName() + "是女孩");
+end
