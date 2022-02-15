@@ -1,0 +1,17 @@
+package com.olive.glb
+import com.olive.drools.bean.People
+import java.lang.Integer
+dialect "java"
+
+global com.olive.drools.service.GlobalService service
+global java.util.List list
+global com.olive.drools.bean.NumCount numCount
+
+rule "global"
+    when
+        People(drlType == "global")
+        $p : People() from service.getPeoples()
+    then
+        list.add($p);
+        numCount.plus();
+ end

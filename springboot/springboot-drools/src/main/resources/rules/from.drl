@@ -1,0 +1,12 @@
+package com.olive.frm
+import com.olive.drools.bean.People
+import com.olive.drools.bean.Animal
+dialect "java"
+
+rule "from"
+    when
+        $an : Animal()
+        $p : People(sex != 3 && drlType == "from") from $an.peoples
+    then
+        System.out.println($p);
+ end

@@ -1,0 +1,7 @@
+package com.olive.quey
+import com.olive.drools.bean.People
+dialect "java"
+
+query "queryPeople" (String $name, Integer $sex)
+    $p : People(name == $name, sex == $sex)
+end

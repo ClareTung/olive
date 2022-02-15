@@ -15,3 +15,11 @@ rule "cat"
         $c : Cat(sex == 1 && $c.getName().equals("金"))
     then System.out.println($c.getName() + "是公的");
 end
+
+rule "gril"
+    when
+        People(sex == 0) and
+        Cat(sex == 0)
+    then
+        System.out.println("gril规则执行");
+end

@@ -2,9 +2,24 @@ package com.olive.people2
 import com.olive.drools.bean.People
 dialect "java"
 
-rule "gril"
+rule "gril3"
     when
         $p : People(sex == 0 && drlType == "people")
     then
         System.out.println($p.getName() + "是女孩");
 end
+
+rule "gril1"
+    when
+        People()
+    then
+        System.out.println("gril1规则执行");
+end
+
+rule "gril2"
+    when
+        People(sex == 0 && drlType == "people")
+    then
+        System.out.println("gril2规则执行");
+end
+

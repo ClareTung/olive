@@ -1,0 +1,16 @@
+package com.olive.impot
+import com.olive.drools.bean.People
+import com.olive.drools.util.DroolsStringUtils
+dialect "java"
+
+function String hello(String name){
+    return "Hello " + name + "!";
+}
+
+rule "impot"
+    when
+        $p : People(drlType == "impot")
+    then
+        System.out.println(DroolsStringUtils.isEmpty($p.getName()));
+        System.out.println(hello("Clare"));
+end
