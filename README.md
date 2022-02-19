@@ -36,6 +36,7 @@
 * [CAP定理](distributed/CAP定理.md)
 
 ## design-pattern：设计模式
+* [设计模式](design-pattern/设计模式.md)
 * [中介者模式](design-pattern/中介者模式.md)
 * [享元模式](design-pattern/享元模式.md)
 * [代理模式](design-pattern/代理模式.md)
