@@ -11,6 +11,10 @@
 > Olive，致力于打造成为一个Java知识体系的知识库。
 
 # 项目结构
+## restructure：重构-改善既有代码的设计
+
+
+
 ## algorithm-data-structure：算法与数据结构
 * [算法与数据结构](algorithm-data-structure/index.md)
 * [一致性Hash算法](algorithm-data-structure/一致性Hash算法.md)
