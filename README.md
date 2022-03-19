@@ -312,6 +312,7 @@
 * [SpringBoot数据库连接池的加载过程](springboot/SpringBoot数据库连接池的加载过程.md)
 * [异步线程池](springboot/异步线程池.md)
 * [Drools规则引擎](springboot/Drools规则引擎.md)
+* [利用注解+AOP+反射机制实现代理模式的业务代码封装](springboot/自定义业务封装.md)
 
 ## springcloud
 * [Hystrix配置](springcloud/Hystrix配置.md)
