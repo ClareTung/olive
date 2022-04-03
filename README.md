@@ -281,7 +281,7 @@
 ## security：安全
 * [什么是堡垒机，为什么要堡垒机](security/什么是堡垒机，为什么要堡垒机.md)
 * [Java Security](security/JavaSecurity.md)
-  * [JBase64算法](security/Base64算法.md)
+  * [Base64算法](security/Base64算法.md)
   * [消息摘要算法](security/消息摘要算法.md)
   * [对称加密算法](security/对称加密算法.md)
   * [非对称加密算法RSA](security/非对称加密算法RSA.md)
