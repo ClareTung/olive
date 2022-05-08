@@ -2,11 +2,13 @@ package com.olive.springboot.start.controller;
 
 import com.google.common.collect.Lists;
 import com.olive.springboot.start.vo.resp.UserRespVO;
+import lombok.Data;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -27,6 +29,7 @@ public class UserController {
                 .userName("clare")
                 .userNick("tang tang")
                 .hobby(Lists.newArrayList("ride", "swim"))
+                .birthday(new Date())
                 .build());
 
         result.add(UserRespVO.builder().build());

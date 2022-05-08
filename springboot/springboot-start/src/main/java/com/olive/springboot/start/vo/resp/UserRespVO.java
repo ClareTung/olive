@@ -1,8 +1,11 @@
 package com.olive.springboot.start.vo.resp;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -11,6 +14,8 @@ import java.util.List;
  * @author: dongtangqiang
  * @date: 2020-12-31
  */
+@NoArgsConstructor
+@AllArgsConstructor
 @Data
 @Builder
 public class UserRespVO {
@@ -34,4 +39,10 @@ public class UserRespVO {
      * 用户爱好
      */
     private List<String> hobby;
+
+    /**
+     * 生日
+     */
+    // @JsonFormat(pattern = "yyyy-MM-dd")
+    private Date birthday;
 }

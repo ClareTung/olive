@@ -4,7 +4,10 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-@Component
+/**
+ * 暂时关闭20220507，要测试可以打开@Component
+ */
+// @Component
 public class ScheduledTask {
 
     @Scheduled(cron = "0/1 * * * * ?")
