@@ -3,8 +3,13 @@ package com.olive.spirngframwork.test;
 import org.junit.Test;
 
 import com.olive.spirngframwork.bean.User03Service;
+import com.olive.spirngframwork.bean.User04Service;
+import com.olive.spirngframwork.bean.UserDao;
 import com.olive.spirngframwork.bean.UserService;
+import com.olive.springframwork.beans.PropertyValue;
+import com.olive.springframwork.beans.PropertyValues;
 import com.olive.springframwork.beans.factory.config.BeanDefinition;
+import com.olive.springframwork.beans.factory.config.BeanReference;
 import com.olive.springframwork.beans.factory.support.DefaultListableBeanFactory;
 
 /**
@@ -41,5 +46,27 @@ public class ApiTest {
         // 3.获取bean
         User03Service userService03 = (User03Service) beanFactory.getBean("userService03", "ClareTung");
         userService03.queryUserInfo();
+    }
+
+    @Test
+    public void testBeanFactory04(){
+        // 1.初始化 BeanFactory
+        DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
+
+        // 2.UserDao注册
+        beanFactory.registerBeanDefinition("userDao", new BeanDefinition(UserDao.class));
+
+        // 3. UserService 设置属性[uId、userDao]
+        PropertyValues propertyValues = new PropertyValues();
+        propertyValues.addPropertyValue(new PropertyValue("uId", "10001"));
+        propertyValues.addPropertyValue(new PropertyValue("userDao",new BeanReference("userDao")));
+
+        // 4. UserService 注入bean
+        BeanDefinition beanDefinition = new BeanDefinition(User04Service.class, propertyValues);
+        beanFactory.registerBeanDefinition("userService04", beanDefinition);
+
+        // 5. UserService 获取bean
+        User04Service user04Service = (User04Service) beanFactory.getBean("userService04");
+        user04Service.queryUserInfo();
     }
 }
