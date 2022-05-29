@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+    <bean id="userDao" class="com.olive.spirngframwork.bean.UserDao"/>
+
+    <bean id="user05Service" class="com.olive.spirngframwork.bean.User05Service">
+        <property name="uId" value="10001"/>
+        <property name="userDao" ref="userDao"/>
+    </bean>
+
+</beans>
