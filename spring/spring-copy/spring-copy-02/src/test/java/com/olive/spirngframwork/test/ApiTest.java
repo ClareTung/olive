@@ -5,6 +5,7 @@ import org.junit.Test;
 import com.olive.spirngframwork.bean.User03Service;
 import com.olive.spirngframwork.bean.User04Service;
 import com.olive.spirngframwork.bean.User05Service;
+import com.olive.spirngframwork.bean.User06Service;
 import com.olive.spirngframwork.bean.UserDao;
 import com.olive.spirngframwork.bean.UserService;
 import com.olive.springframwork.beans.PropertyValue;
@@ -13,6 +14,7 @@ import com.olive.springframwork.beans.factory.config.BeanDefinition;
 import com.olive.springframwork.beans.factory.config.BeanReference;
 import com.olive.springframwork.beans.factory.support.DefaultListableBeanFactory;
 import com.olive.springframwork.beans.factory.xml.XmlBeanDefinitionReader;
+import com.olive.springframwork.context.support.ClassPathXmlApplicationContext;
 
 /**
  * 类ApiTest的实现描述：单元测试类
@@ -84,6 +86,18 @@ public class ApiTest {
 
         // 3. 获取Bean对象调用方法
         User05Service userService = beanFactory.getBean("user05Service", User05Service.class);
+        String result = userService.queryUserInfo();
+        System.out.println("测试结果：" + result);
+    }
+
+    @Test
+    public void test06(){
+        // 测试上下文
+        // 1.初始化 BeanFactory
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring06.xml");
+
+        // 2. 获取Bean对象调用方法
+        User06Service userService = applicationContext.getBean("user06Service", User06Service.class);
         String result = userService.queryUserInfo();
         System.out.println("测试结果：" + result);
     }

@@ -5,7 +5,7 @@ import java.util.Map;
 import com.olive.springframwork.beans.BeansException;
 
 /**
- * 类ListableBeanFactory的实现描述：ListableBeanFactory
+ * 类ListableBeanFactory的实现描述：一个扩展 Bean 工厂接口的接口
  *
  * @author dongtangqiang 2022/5/28 22:47
  */

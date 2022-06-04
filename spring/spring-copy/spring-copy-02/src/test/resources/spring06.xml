@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+    <bean id="userDao" class="com.olive.spirngframwork.bean.UserDao"/>
+
+    <bean id="user06Service" class="com.olive.spirngframwork.bean.User06Service">
+        <property name="uId" value="10001"/>
+        <property name="company" value="华为"/>
+        <property name="location" value="深圳"/>
+        <property name="userDao" ref="userDao"/>
+    </bean>
+
+    <bean class="com.olive.spirngframwork.common.MyBeanFactoryPostProcessor" />
+    <bean class="com.olive.spirngframwork.common.MyBeanPostProcessor" />
+</beans>
