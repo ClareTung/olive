@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+    <bean id="userDao" class="com.olive.spirngframwork.bean.User07Dao" init-method="initDataMethod" destroy-method="destroyDataMethod"/>
+
+    <bean id="user07Service" class="com.olive.spirngframwork.bean.User07Service">
+        <property name="uId" value="10001"/>
+        <property name="company" value="华为"/>
+        <property name="location" value="深圳"/>
+        <property name="userDao" ref="userDao"/>
+    </bean>
+</beans>

@@ -6,6 +6,7 @@ import com.olive.spirngframwork.bean.User03Service;
 import com.olive.spirngframwork.bean.User04Service;
 import com.olive.spirngframwork.bean.User05Service;
 import com.olive.spirngframwork.bean.User06Service;
+import com.olive.spirngframwork.bean.User07Service;
 import com.olive.spirngframwork.bean.UserDao;
 import com.olive.spirngframwork.bean.UserService;
 import com.olive.springframwork.beans.PropertyValue;
@@ -98,6 +99,19 @@ public class ApiTest {
 
         // 2. 获取Bean对象调用方法
         User06Service userService = applicationContext.getBean("user06Service", User06Service.class);
+        String result = userService.queryUserInfo();
+        System.out.println("测试结果：" + result);
+    }
+
+    @Test
+    public void test07(){
+        // 测试上下文
+        // 1.初始化 BeanFactory
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring07.xml");
+        applicationContext.registerShutdownHook();
+
+        // 2. 获取Bean对象调用方法
+        User07Service userService = applicationContext.getBean("user07Service", User07Service.class);
         String result = userService.queryUserInfo();
         System.out.println("测试结果：" + result);
     }
