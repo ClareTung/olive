@@ -207,4 +207,11 @@ public class ApiTest {
         // 测试调用
         System.out.println("测试结果：" + proxyCglib.register("Tung"));
     }
+
+    @Test
+    public void testAop(){
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring13.xml");
+        IUserService userService = applicationContext.getBean("userService", IUserService.class);
+        System.out.println("测试结果：" + userService.queryUserInfo());
+    }
 }
