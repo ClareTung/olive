@@ -12,6 +12,7 @@ import com.olive.spirngframwork.bean.User08Service;
 import com.olive.spirngframwork.bean.User09Service;
 import com.olive.spirngframwork.bean.UserDao;
 import com.olive.spirngframwork.bean.UserService;
+import com.olive.spirngframwork.event.CustomEvent;
 import com.olive.springframwork.beans.PropertyValue;
 import com.olive.springframwork.beans.PropertyValues;
 import com.olive.springframwork.beans.factory.config.BeanDefinition;
@@ -166,5 +167,14 @@ public class ApiTest {
         // 2. 获取Bean对象调用方法
         User09Service userService01 = applicationContext.getBean("user09Service", User09Service.class);
         System.out.println("测试结果：" + userService01.queryUserInfo());
+    }
+
+    @Test
+    public void testEvent() {
+        // 测试感知接口对应的具体实现(BeanNameAware, BeanClassLoaderAware, ApplicationContextAware, BeanFactoryAware)
+        // 1.初始化 BeanFactory
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring10.xml");
+        applicationContext.publishEvent(new CustomEvent(applicationContext, 1L, "success"));
+        applicationContext.registerShutdownHook();
     }
 }
