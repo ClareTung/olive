@@ -7,6 +7,7 @@ import com.olive.springframwork.beans.BeansException;
 import com.olive.springframwork.beans.factory.config.BeanDefinition;
 import com.olive.springframwork.beans.factory.config.BeanPostProcessor;
 import com.olive.springframwork.beans.factory.config.ConfigurableBeanFactory;
+import com.olive.springframwork.util.ClassUtils;
 
 /**
  * 类AbstractBeanFactory的实现描述：抽象bean工厂
@@ -20,6 +21,11 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
      * BeanPostProcessors to apply in createBean
      */
     private final List<BeanPostProcessor> beanPostProcessors = new ArrayList<>();
+
+    /**
+     * ClassLoader to resolve bean class names with, if necessary
+     */
+    private ClassLoader beanClassLoader = ClassUtils.getDefaultClassLoader();
 
     @Override
     public Object getBean(String name) throws BeansException {
@@ -64,5 +70,9 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
      */
     public List<BeanPostProcessor> getBeanPostProcessors() {
         return this.beanPostProcessors;
+    }
+
+    public ClassLoader getBeanClassLoader() {
+        return this.beanClassLoader;
     }
 }

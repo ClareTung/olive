@@ -7,6 +7,7 @@ import com.olive.spirngframwork.bean.User04Service;
 import com.olive.spirngframwork.bean.User05Service;
 import com.olive.spirngframwork.bean.User06Service;
 import com.olive.spirngframwork.bean.User07Service;
+import com.olive.spirngframwork.bean.User08Service;
 import com.olive.spirngframwork.bean.UserDao;
 import com.olive.spirngframwork.bean.UserService;
 import com.olive.springframwork.beans.PropertyValue;
@@ -25,7 +26,7 @@ import com.olive.springframwork.context.support.ClassPathXmlApplicationContext;
 public class ApiTest {
 
     @Test
-    public void testBeanFactory(){
+    public void testBeanFactory() {
         // 1.初始化 BeanFactory
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
         // 2.注册 bean
@@ -40,7 +41,7 @@ public class ApiTest {
     }
 
     @Test
-    public void testBeanFactory03(){
+    public void testBeanFactory03() {
         // 1.初始化 BeanFactory
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
 
@@ -54,7 +55,7 @@ public class ApiTest {
     }
 
     @Test
-    public void testBeanFactory04(){
+    public void testBeanFactory04() {
         // 1.初始化 BeanFactory
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
 
@@ -64,7 +65,7 @@ public class ApiTest {
         // 3. UserService 设置属性[uId、userDao]
         PropertyValues propertyValues = new PropertyValues();
         propertyValues.addPropertyValue(new PropertyValue("uId", "10001"));
-        propertyValues.addPropertyValue(new PropertyValue("userDao",new BeanReference("userDao")));
+        propertyValues.addPropertyValue(new PropertyValue("userDao", new BeanReference("userDao")));
 
         // 4. UserService 注入bean
         BeanDefinition beanDefinition = new BeanDefinition(User04Service.class, propertyValues);
@@ -76,7 +77,7 @@ public class ApiTest {
     }
 
     @Test
-    public void testXmlRegisterBean(){
+    public void testXmlRegisterBean() {
         // case：测试xml加载bean
         // 1.初始化 BeanFactory
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
@@ -92,7 +93,7 @@ public class ApiTest {
     }
 
     @Test
-    public void test06(){
+    public void test06() {
         // 测试上下文
         // 1.初始化 BeanFactory
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring06.xml");
@@ -104,7 +105,7 @@ public class ApiTest {
     }
 
     @Test
-    public void test07(){
+    public void test07() {
         // 测试上下文
         // 1.初始化 BeanFactory
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring07.xml");
@@ -114,5 +115,21 @@ public class ApiTest {
         User07Service userService = applicationContext.getBean("user07Service", User07Service.class);
         String result = userService.queryUserInfo();
         System.out.println("测试结果：" + result);
+    }
+
+
+    @Test
+    public void test08() {
+        // 测试感知接口对应的具体实现(BeanNameAware, BeanClassLoaderAware, ApplicationContextAware, BeanFactoryAware)
+        // 1.初始化 BeanFactory
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring08.xml");
+        applicationContext.registerShutdownHook();
+
+        // 2. 获取Bean对象调用方法
+        User08Service userService = applicationContext.getBean("user08Service", User08Service.class);
+        String result = userService.queryUserInfo();
+        System.out.println("测试结果：" + result);
+        System.out.println("ApplicationContextAware：" + userService.getApplicationContext());
+        System.out.println("BeanFactoryAware：" + userService.getBeanFactory());
     }
 }
