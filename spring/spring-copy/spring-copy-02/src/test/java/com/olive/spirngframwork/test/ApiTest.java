@@ -3,6 +3,7 @@ package com.olive.spirngframwork.test;
 import org.junit.Test;
 import org.openjdk.jol.info.ClassLayout;
 
+import com.olive.spirngframwork.bean.IUserService;
 import com.olive.spirngframwork.bean.User03Service;
 import com.olive.spirngframwork.bean.User04Service;
 import com.olive.spirngframwork.bean.User05Service;
@@ -12,7 +13,14 @@ import com.olive.spirngframwork.bean.User08Service;
 import com.olive.spirngframwork.bean.User09Service;
 import com.olive.spirngframwork.bean.UserDao;
 import com.olive.spirngframwork.bean.UserService;
+import com.olive.spirngframwork.bean.UserService12;
+import com.olive.spirngframwork.bean.UserServiceInterceptor;
 import com.olive.spirngframwork.event.CustomEvent;
+import com.olive.springframwork.aop.AdvisedSupport;
+import com.olive.springframwork.aop.TargetSource;
+import com.olive.springframwork.aop.aspectj.AspectJExpressionPointcut;
+import com.olive.springframwork.aop.framework.Cglib2AopProxy;
+import com.olive.springframwork.aop.framework.JdkDynamicAopProxy;
 import com.olive.springframwork.beans.PropertyValue;
 import com.olive.springframwork.beans.PropertyValues;
 import com.olive.springframwork.beans.factory.config.BeanDefinition;
@@ -176,5 +184,27 @@ public class ApiTest {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring10.xml");
         applicationContext.publishEvent(new CustomEvent(applicationContext, 1L, "success"));
         applicationContext.registerShutdownHook();
+    }
+
+    @Test
+    public void testDynamic(){
+        // 目标对象
+        IUserService userService = new UserService12();
+
+        // 组装代理信息
+        AdvisedSupport advisedSupport = new AdvisedSupport();
+        advisedSupport.setTargetSource(new TargetSource(userService));
+        advisedSupport.setMethodInterceptor(new UserServiceInterceptor());
+        advisedSupport.setMethodMatcher(new AspectJExpressionPointcut("execution(* com.olive.spirngframwork.bean.IUserService.*(..))"));
+
+        // 代理对象(JdkDynamicAopProxy)
+        IUserService proxyJdk = (IUserService) new JdkDynamicAopProxy(advisedSupport).getProxy();
+        // 测试调用
+        System.out.println("测试结果：" + proxyJdk.queryUserInfo());
+
+        // 代理对象(Cglib2AopProxy)
+        IUserService proxyCglib = (IUserService) new Cglib2AopProxy(advisedSupport).getProxy();
+        // 测试调用
+        System.out.println("测试结果：" + proxyCglib.register("Tung"));
     }
 }
