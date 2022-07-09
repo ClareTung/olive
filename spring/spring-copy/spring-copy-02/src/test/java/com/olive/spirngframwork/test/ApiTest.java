@@ -1,6 +1,7 @@
 package com.olive.spirngframwork.test;
 
 import org.junit.Test;
+import org.openjdk.jol.info.ClassLayout;
 
 import com.olive.spirngframwork.bean.User03Service;
 import com.olive.spirngframwork.bean.User04Service;
@@ -8,6 +9,7 @@ import com.olive.spirngframwork.bean.User05Service;
 import com.olive.spirngframwork.bean.User06Service;
 import com.olive.spirngframwork.bean.User07Service;
 import com.olive.spirngframwork.bean.User08Service;
+import com.olive.spirngframwork.bean.User09Service;
 import com.olive.spirngframwork.bean.UserDao;
 import com.olive.spirngframwork.bean.UserService;
 import com.olive.springframwork.beans.PropertyValue;
@@ -131,5 +133,38 @@ public class ApiTest {
         System.out.println("测试结果：" + result);
         System.out.println("ApplicationContextAware：" + userService.getApplicationContext());
         System.out.println("BeanFactoryAware：" + userService.getBeanFactory());
+    }
+
+    @Test
+    public void testPrototype(){
+        // 1.初始化 BeanFactory
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring09.xml");
+        applicationContext.registerShutdownHook();
+
+        // 2. 获取Bean对象调用方法
+        User09Service userService01 = applicationContext.getBean("user09Service", User09Service.class);
+        User09Service userService02 = applicationContext.getBean("user09Service", User09Service.class);
+
+        // 3. 配置 scope="prototype/singleton"
+        System.out.println(userService01);
+        System.out.println(userService02);
+
+        // 4. 打印十六进制哈希
+        System.out.println(userService01 + " 十六进制哈希：" + Integer.toHexString(userService01.hashCode()));
+        System.out.println(ClassLayout.parseInstance(userService01).toPrintable());
+        System.out.println(userService01 + " 十六进制哈希：" + Integer.toHexString(userService02.hashCode()));
+        System.out.println(ClassLayout.parseInstance(userService02).toPrintable());
+    }
+
+    @Test
+    public void test09() {
+        // 测试感知接口对应的具体实现(BeanNameAware, BeanClassLoaderAware, ApplicationContextAware, BeanFactoryAware)
+        // 1.初始化 BeanFactory
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring09.xml");
+        applicationContext.registerShutdownHook();
+
+        // 2. 获取Bean对象调用方法
+        User09Service userService01 = applicationContext.getBean("user09Service", User09Service.class);
+        System.out.println("测试结果：" + userService01.queryUserInfo());
     }
 }

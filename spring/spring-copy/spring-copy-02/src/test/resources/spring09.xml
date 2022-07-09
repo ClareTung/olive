@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+    <bean id="proxyUserDao" class="com.olive.spirngframwork.bean.ProxyBeanFactory" />
+
+    <bean id="user09Service" class="com.olive.spirngframwork.bean.User09Service" scope="prototype">
+        <property name="uId" value="10001"/>
+        <property name="company" value="华为"/>
+        <property name="location" value="深圳"/>
+        <property name="userDao" ref="proxyUserDao"/>
+    </bean>
+</beans>
