@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+    <bean class="com.olive.springframwork.beans.factory.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:token.properties"/>
+    </bean>
+
+    <bean id="userService14" class="com.olive.spirngframwork.autobean.UserService14">
+        <property name="token" value="${token}"/>
+    </bean>
+
+</beans>
