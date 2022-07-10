@@ -230,4 +230,11 @@ public class ApiTest {
         IUserService userService = applicationContext.getBean("userService14", IUserService.class);
         System.out.println("测试结果：" + userService.queryUserInfo());
     }
+
+    @Test
+    public void testScan2() {
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring15.xml");
+        IUserService userService = applicationContext.getBean("userService15", IUserService.class);
+        System.out.println("测试结果：" + userService.queryUserInfo());
+    }
 }
