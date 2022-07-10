@@ -237,4 +237,12 @@ public class ApiTest {
         IUserService userService = applicationContext.getBean("userService15", IUserService.class);
         System.out.println("测试结果：" + userService.queryUserInfo());
     }
+
+    @Test
+    public void testAutoProxy() {
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring16.xml");
+        IUserService userService = applicationContext.getBean("userService", IUserService.class);
+        System.out.println("测试结果：" + userService.queryUserInfo());
+    }
+
 }
