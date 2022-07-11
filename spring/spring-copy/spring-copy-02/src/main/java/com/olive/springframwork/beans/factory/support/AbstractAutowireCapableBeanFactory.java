@@ -17,9 +17,11 @@ import com.olive.springframwork.beans.factory.config.BeanDefinition;
 import com.olive.springframwork.beans.factory.config.BeanPostProcessor;
 import com.olive.springframwork.beans.factory.config.BeanReference;
 import com.olive.springframwork.beans.factory.config.InstantiationAwareBeanPostProcessor;
+import com.olive.springframwork.core.convert.ConversionService;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.util.StrUtil;
+import cn.hutool.core.util.TypeUtil;
 
 /**
  * 类AbstractAutowireCapableBeanFactory的实现描述：实例化Bean类
@@ -87,9 +89,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
         for (BeanPostProcessor beanPostProcessor : getBeanPostProcessors()) {
             if (beanPostProcessor instanceof InstantiationAwareBeanPostProcessor) {
                 exposedObject = ((InstantiationAwareBeanPostProcessor) beanPostProcessor).getEarlyBeanReference(exposedObject, beanName);
-                if (null == exposedObject) {
-                    return exposedObject;
-                }
+                if (null == exposedObject) return exposedObject;
             }
         }
 
@@ -197,12 +197,23 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
                     BeanReference beanReference = (BeanReference) value;
                     value = getBean(beanReference.getBeanName());
                 }
+                // 类型转换
+                else {
+                    Class<?> sourceType = value.getClass();
+                    Class<?> targetType = (Class<?>) TypeUtil.getFieldType(bean.getClass(), name);
+                    ConversionService conversionService = getConversionService();
+                    if (conversionService != null) {
+                        if (conversionService.canConvert(sourceType, targetType)) {
+                            value = conversionService.convert(value, targetType);
+                        }
+                    }
+                }
 
                 // 反射设置属性填充
                 BeanUtil.setFieldValue(bean, name, value);
             }
         } catch (Exception e) {
-            throw new BeansException("Error setting property values：" + beanName);
+            throw new BeansException("Error setting property values：" + beanName + " message：" + e);
         }
     }
 

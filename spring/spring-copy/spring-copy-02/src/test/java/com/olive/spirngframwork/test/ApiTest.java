@@ -3,6 +3,7 @@ package com.olive.spirngframwork.test;
 import org.junit.Test;
 import org.openjdk.jol.info.ClassLayout;
 
+import com.olive.spirngframwork.bean.Husband;
 import com.olive.spirngframwork.bean.IUserService;
 import com.olive.spirngframwork.bean.User03Service;
 import com.olive.spirngframwork.bean.User04Service;
@@ -15,6 +16,7 @@ import com.olive.spirngframwork.bean.UserDao;
 import com.olive.spirngframwork.bean.UserService;
 import com.olive.spirngframwork.bean.UserService12;
 import com.olive.spirngframwork.bean.UserServiceInterceptor;
+import com.olive.spirngframwork.converter.StringToIntegerConverter;
 import com.olive.spirngframwork.event.CustomEvent;
 import com.olive.springframwork.aop.AdvisedSupport;
 import com.olive.springframwork.aop.TargetSource;
@@ -28,6 +30,8 @@ import com.olive.springframwork.beans.factory.config.BeanReference;
 import com.olive.springframwork.beans.factory.support.DefaultListableBeanFactory;
 import com.olive.springframwork.beans.factory.xml.XmlBeanDefinitionReader;
 import com.olive.springframwork.context.support.ClassPathXmlApplicationContext;
+import com.olive.springframwork.core.convert.converter.Converter;
+import com.olive.springframwork.core.convert.support.StringToNumberConverterFactory;
 
 /**
  * 类ApiTest的实现描述：单元测试类
@@ -244,5 +248,31 @@ public class ApiTest {
         IUserService userService = applicationContext.getBean("userService", IUserService.class);
         System.out.println("测试结果：" + userService.queryUserInfo());
     }
+
+    @Test
+    public void testConvert() {
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring17.xml");
+        Husband husband = applicationContext.getBean("husband", Husband.class);
+        System.out.println("测试结果：" + husband);
+    }
+
+    @Test
+    public void testStringToIntegerConverter() {
+        StringToIntegerConverter converter = new StringToIntegerConverter();
+        Integer num = converter.convert("1234");
+        System.out.println("测试结果：" + num);
+    }
+
+    @Test
+    public void testStringToNumberConverterFactory() {
+        StringToNumberConverterFactory converterFactory = new StringToNumberConverterFactory();
+
+        Converter<String, Integer> stringToIntegerConverter = converterFactory.getConverter(Integer.class);
+        System.out.println("测试结果：" + stringToIntegerConverter.convert("1234"));
+
+        Converter<String, Long> stringToLongConverter = converterFactory.getConverter(Long.class);
+        System.out.println("测试结果：" + stringToLongConverter.convert("1234"));
+    }
+
 
 }

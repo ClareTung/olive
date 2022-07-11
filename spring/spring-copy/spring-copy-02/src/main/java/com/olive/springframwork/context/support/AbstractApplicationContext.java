@@ -14,6 +14,7 @@ import com.olive.springframwork.context.event.ApplicationEventMulticaster;
 import com.olive.springframwork.context.event.ContextClosedEvent;
 import com.olive.springframwork.context.event.ContextRefreshedEvent;
 import com.olive.springframwork.context.event.SimpleApplicationEventMulticaster;
+import com.olive.springframwork.core.convert.ConversionService;
 import com.olive.springframwork.core.io.DefaultResourceLoader;
 
 /**
@@ -53,8 +54,25 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader i
         // 7. 注册事件监听器
         registerListeners();
 
+        // 8. 设置类型转换器、提前实例化单例Bean对象
+        finishBeanFactoryInitialization(beanFactory);
+
         // 9. 发布容器刷新完成事件
         finishRefresh();
+    }
+
+    // 设置类型转换器、提前实例化单例Bean对象
+    protected void finishBeanFactoryInitialization(ConfigurableListableBeanFactory beanFactory) {
+        // 设置类型转换器
+        if (beanFactory.containsBean("conversionService")) {
+            Object conversionService = beanFactory.getBean("conversionService");
+            if (conversionService instanceof ConversionService) {
+                beanFactory.setConversionService((ConversionService) conversionService);
+            }
+        }
+
+        // 提前实例化单例Bean对象
+        beanFactory.preInstantiateSingletons();
     }
 
     protected abstract void refreshBeanFactory() throws BeansException;
@@ -120,6 +138,11 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader i
     @Override
     public <T> T getBean(Class<T> requiredType) throws BeansException {
         return getBeanFactory().getBean(requiredType);
+    }
+
+    @Override
+    public boolean containsBean(String name) {
+        return getBeanFactory().containsBean(name);
     }
 
     @Override

@@ -1,7 +1,9 @@
 package com.olive.springframwork.beans.factory.config;
 
 import com.olive.springframwork.beans.factory.HierarchicalBeanFactory;
+import com.olive.springframwork.core.convert.ConversionService;
 import com.olive.springframwork.util.StringValueResolver;
+import com.sun.istack.internal.Nullable;
 
 /**
  * 类ConfigurableBeanFactory的实现描述：ConfigurableBeanFactory
@@ -35,4 +37,19 @@ public interface ConfigurableBeanFactory extends HierarchicalBeanFactory, Single
      * @since 3.0
      */
     String resolveEmbeddedValue(String value);
+
+    /**
+     * Specify a Spring 3.0 ConversionService to use for converting
+     * property values, as an alternative to JavaBeans PropertyEditors.
+     * @since 3.0
+     */
+    void setConversionService(ConversionService conversionService);
+
+    /**
+     * Return the associated ConversionService, if any.
+     * @since 3.0
+     */
+    @Nullable
+    ConversionService getConversionService();
+
 }
