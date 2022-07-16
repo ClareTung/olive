@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow>
+    <chain name="mainChain">
+        <then value="checkCmp, slotInitCmp, priceStepInitCmp"/>
+        <then value="promotionConvertCmp"/>
+        <then value="memberDiscountCmp"/>
+        <then value="promotionChain"/>
+        <then value="couponCmp"/>
+        <then value="postageCondCmp( postageCmp | overseaPostageCmp )"/>
+        <when value="priceResultCmp, stepPrintCmp"/>
+    </chain>
+</flow>
