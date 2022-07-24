@@ -14,6 +14,7 @@
 
 ## 知识图谱
 * [并发编程](knowledge-graph/并发编程.png)
+* [设计模式](knowledge-graph/设计模式.png)
 
 
 ## restructure：重构-改善既有代码的设计
