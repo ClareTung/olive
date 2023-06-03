@@ -1,13 +1,21 @@
 package com.olive.java.start.concurrent.completablefuture;
 
+import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.Future;
+import java.util.concurrent.LinkedBlockingDeque;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 /**
  * @description: CompletableFuture测试
@@ -17,6 +25,10 @@ import java.util.concurrent.Future;
  */
 @Slf4j
 public class CompletableFutureTest {
+
+    public static final ExecutorService CHECK_THREAD_POOL =
+            new ThreadPoolExecutor(3, 10, 300L, TimeUnit.MILLISECONDS, new LinkedBlockingDeque<>(100),
+                    new ThreadFactoryBuilder().setNameFormat("check-pool-%d").build(), new ThreadPoolExecutor.CallerRunsPolicy());
 
 
     @Test
@@ -588,6 +600,54 @@ public class CompletableFutureTest {
 
         log.info("cf5 result : {}", cf5.get());
 
+    }
+
+    @Test
+    public void testAllOf() {
+
+        List<CompletableFuture<String>> futureList = new ArrayList<>();
+        for (int i = 1; i <= 3; i++) {
+            int finalI = i;
+            futureList.add(CompletableFuture.supplyAsync(() -> checkInfo(finalI), CHECK_THREAD_POOL));
+        }
+
+        CompletableFuture<Void> allFutures =
+                CompletableFuture.allOf(futureList.toArray(new CompletableFuture[0]));
+        CompletableFuture<List<String>> resultList = allFutures.thenApply(v ->
+                futureList.stream().map(CompletableFuture::join).filter(Objects::nonNull).collect(Collectors.toList()));
+
+        try {
+            log.info("result:{}", resultList.join());
+        } catch (Exception e){
+            log.info("抓住异常了");
+        }
+
+
+        // 测试异常后其他任务还能不能执行
+        List<CompletableFuture<String>> futureList2 = new ArrayList<>();
+        for (int i = 4; i <= 6; i++) {
+            int finalI = i;
+            futureList2.add(CompletableFuture.supplyAsync(() -> checkInfo(finalI), CHECK_THREAD_POOL));
+        }
+
+        CompletableFuture<Void> allFutures2 =
+                CompletableFuture.allOf(futureList2.toArray(new CompletableFuture[0]));
+        CompletableFuture<List<String>> resultList2 = allFutures2.thenApply(v ->
+            futureList2.stream().map(CompletableFuture::join).filter(Objects::nonNull).collect(Collectors.toList()));
+
+        log.info("result2:{}", resultList2.join());
+        log.info("{} currentThread, time is -> {}", Thread.currentThread(), System.currentTimeMillis());
+    }
+
+
+    private String checkInfo(Integer id) {
+        log.info("{} exec, time is -> {}", Thread.currentThread(), System.currentTimeMillis());
+        if (id == 2) {
+            throw new RuntimeException("报错啦~");
+            //return null;
+        }
+
+        return "SUCCESS:" + id;
     }
 
 }
